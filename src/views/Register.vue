@@ -25,6 +25,7 @@
 </template>
 
 <script>
+const axios = require('axios');
 export default {
   name: 'register',
   data() {
@@ -46,10 +47,11 @@ export default {
       } catch (error) {
         console.log(error);
       }
-    }
+    },
   }
 }
 </script>
+
 
 <style scoped>
 form {

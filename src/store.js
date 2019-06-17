@@ -18,6 +18,12 @@ export default new Vuex.Store({
       try {
         let response = await firebase.auth().createUserWithEmailAndPassword(data.email, data.password);
         context.commit('setUser', response.data);
+        var db = firebase.firestore();
+        var usersRef = db.collection('users');
+        let item = {
+          id: data.email,
+        };
+        usersRef.doc(item.id.toString()).set(item);
         return "";
       } catch (error) {
         return error.message;
@@ -49,6 +55,6 @@ export default new Vuex.Store({
       } catch (error) {
         return "";
       }
-    }
+    },
   }
 })

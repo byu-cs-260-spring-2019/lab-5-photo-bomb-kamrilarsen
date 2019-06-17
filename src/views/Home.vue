@@ -1,7 +1,9 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img alt="Lock logo" src="../assets/lock.jpeg">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <footer><a href="https://github.com/byu-cs-260-spring-2019/lab-5-photo-bomb-kamrilarsen">GitHub Repository</a></footer>
+
   </div>
 </template>
 

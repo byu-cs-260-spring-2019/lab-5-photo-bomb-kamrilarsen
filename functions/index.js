@@ -8,6 +8,5 @@ const firebaseApp = firebase.initializeApp(
 
 const app = express();
 
-var db = firebase.firestore();
-
 exports.app = functions.https.onRequest(app);
+
